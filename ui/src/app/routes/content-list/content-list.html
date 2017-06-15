@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h3>Contents</h3>
+</div>
+
+<!--<rr-type *ngIf="isReady" [(activeType)]="activeType" (typeFilterChange)="activeType = $event" class="pull-right"></rr-type>-->
+
+<div class="table-contexts">
+  <table class="table-contexts__table">
+    <colgroup>
+      <col width="300">
+      <col width="600">
+      <col width="100">
+      <col width="100">
+      <col width="100">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th>description/name</th>
+        <th>languages</th>
+        <th>&nbsp;</th>
+        <th>type</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!--<tr *ngIf="!contents || contents.length == 0"><td colspan="6" class="text-center">No Data</td></tr>-->
+      <!--<tr *ngFor="let content of contents | filterType:activeType">-->
+        <!--<td>{{ content.name }}</td>-->
+        <!--<td><span class="langs-span" *ngFor="let translation of content.translations">{{ translation.language }}</span></td>-->
+        <!--<td>-->
+          <!--<span *ngIf="content.is_fixed" class="fixed-span">fixed</span>-->
+        <!--</td>-->
+        <!--<td>{{ content.type.name }}</td>-->
+        <!--<td><a (click)="addOrEditContent(content.id)">Edit</a></td>-->
+        <!--<td>-->
+          <!--<rr-delete-->
+            <!--*ngIf="!content.is_fixed"-->
+            <!--[id]="content.id"-->
+            <!--(onDelete)="removeContent($event)">-->
+          <!--</rr-delete>-->
+        <!--</td>-->
+      <!--</tr>-->
+    </tbody>
+  </table>
+</div>
+
