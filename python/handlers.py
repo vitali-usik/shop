@@ -3,9 +3,9 @@ import json
 
 COMPUTER_GOODS = [
     {"id": 1, "name": 'LG22MP48HQ-P', "type": "monitor", "price": 500},
-    {"id": 1, "name": 'PhilipsBDM4037UW', "type": "monitor", "price": 450},
-    {"id": 1, "name": 'HAFFMaximaRAM4', "type": "pc", "price": 1200},
-    {"id": 1, "name": 'BVKAdvanced010', "type": "pc", "price": 1500}
+    {"id": 2, "name": 'PhilipsBDM4037UW', "type": "monitor", "price": 450},
+    {"id": 3, "name": 'HAFFMaximaRAM4', "type": "pc", "price": 1200},
+    {"id": 4, "name": 'BVKAdvanced010', "type": "pc", "price": 1500}
 ]
 
 class GoodsListRequestHandler(tornado.web.RequestHandler):
@@ -31,16 +31,21 @@ class GoodsItemRequestHandler(tornado.web.RequestHandler):
                     i
                 )
 
-    def post(self, *args, **kwargs):
+class GoodsItemAddRequestHandler(tornado.web.RequestHandler):
+
+    def get(self, *args, **kwargs):
 
         name = self.get_argument("name")
-        good_id = self.get_argument("id")
         type = self.get_argument("type")
         price = self.get_argument("price")
 
-        COMPUTER_GOODS.append({"id": good_id, "name": name, "type": type, "price": price})
+        COMPUTER_GOODS.append({"id": 5, "name": name, "type": type, "price": price})
 
-        self.write(COMPUTER_GOODS)
+        json_string = json.dumps(COMPUTER_GOODS)
+
+        self.write(
+            json_string
+        )
 
 
 

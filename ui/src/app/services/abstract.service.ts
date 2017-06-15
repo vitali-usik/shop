@@ -29,10 +29,10 @@ export abstract class AbstractService {
     return this.http.get(API_PREFIX + url, this.options.merge(options)).map(this.convert);
   }
 
-  protected post(url: string, json) {
-    let data = JSON.stringify(json);
+  protected post(url: string, body) {
+    //let data = JSON.stringify(json);
 
-    return this.http.post(API_PREFIX + url, data, this.options).map(this.convert);
+    return this.http.post(API_PREFIX + url, body, this.options).map(this.convert);
   }
 
   protected delete(url: string, options?: RequestOptions) {

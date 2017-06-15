@@ -14,6 +14,12 @@ export class ContentService extends AbstractService{
     return this.get('/goods');
   }
 
+  submitGoods(goods: any) {
+    let body = `name=${goods.name}&type=${goods.type}&price=${goods.price}`;
+    //let body = `username=${this.login}&password=${this.password}`;
+    return this.get('/goods/add' + '?' + body);
+  }
+
   // getContentById(id): Observable<any> {
   //   let options = new RequestOptions();
   //   let params = new URLSearchParams();
@@ -22,10 +28,6 @@ export class ContentService extends AbstractService{
   //   options.search = params;
   //
   //   return this.getById('/content', options);
-  // }
-  //
-  // saveOrUpdate(content: any) {
-  //   return this.post('/upsert_content', content);
   // }
   //
   // getLinkedContexts(id): Observable<any> {

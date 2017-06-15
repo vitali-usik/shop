@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <form class="add-good">
+    <label for="nameId">
+      Name: <input type="text" [(ngModel)]="goods.name" id="nameId" name="name">
+    </label>
+    <label for="typeId">
+      Type: <input type="text" [(ngModel)]="goods.type" id="typeId" name="type">
+    </label>
+    <label for="priceId">
+      Price: <input type="text" [(ngModel)]="goods.price" id="priceId" name="price">
+    </label>
+    <button (click)="submit()">Submit</button>
+  </form>
+</div>

@@ -10,6 +10,7 @@ def run_server():
         [
             (r"/goods", handlers.GoodsListRequestHandler),
             (r"/good", handlers.GoodsItemRequestHandler),
+            (r"/goods/add", handlers.GoodsItemAddRequestHandler),
             (r"/get_good2", handlers.CustomRequestHandler2)
         ]
     )
