@@ -20,6 +20,10 @@ export class ContentService extends AbstractService{
     return this.get('/goods/add' + '?' + body);
   }
 
+  getGoodsItem(name: string): Observable<any[]>{
+    return this.get('/good?name=' + name);
+  }
+
   // getContentById(id): Observable<any> {
   //   let options = new RequestOptions();
   //   let params = new URLSearchParams();

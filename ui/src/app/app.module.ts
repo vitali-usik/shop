@@ -11,6 +11,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { PopoverModule } from 'ngx-bootstrap';
 import {GoodsListRoute} from "./routes/goods-list.route";
 import {AddGoodsRoute} from "./routes/add-goods.route";
+import {GoodsItemRoute} from "./routes/goods-item.route";
+import {BasketRoute} from "./routes/basket.route";
 
 @NgModule({
   imports: [
@@ -27,7 +29,9 @@ import {AddGoodsRoute} from "./routes/add-goods.route";
     AppComponent,
     ContentListRoute,
     GoodsListRoute,
-    AddGoodsRoute
+    AddGoodsRoute,
+    GoodsItemRoute,
+    BasketRoute
   ],
   bootstrap: [AppComponent]
 })

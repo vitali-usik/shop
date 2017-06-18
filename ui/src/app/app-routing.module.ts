@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {GoodsListRoute} from "./routes/goods-list.route";
 import {AddGoodsRoute} from "./routes/add-goods.route";
+import {GoodsItemRoute} from "./routes/goods-item.route";
+import {BasketRoute} from "./routes/basket.route";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'context', pathMatch: 'full' },
@@ -9,7 +11,9 @@ export const routes: Routes = [
     path: 'goods',
     children: [
       { path: '', component: GoodsListRoute },
-      { path: 'add', component: AddGoodsRoute }
+      { path: 'add', component: AddGoodsRoute },
+      { path: 'show/:name', component: GoodsItemRoute },
+      { path: 'show/my/basket', component: BasketRoute }
     ]
   },
   { path: '**', redirectTo: 'goods', pathMatch: 'full' }

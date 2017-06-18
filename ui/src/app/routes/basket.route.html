@@ -1,13 +1,13 @@
-
 <div class="wrapper">
+  <h5>My goods</h5>
   <table class="goods-list">
     <thead>
-      <tr>
-        <th class="name">name</th>
-        <th class="type">type</th>
-        <th class="price">price</th>
-        <th class="add">&nbsp;</th>
-      </tr>
+    <tr>
+      <th class="name">name</th>
+      <th class="type">type</th>
+      <th class="price">price</th>
+      <th class="add">&nbsp;</th>
+    </tr>
     </thead>
     <tr *ngFor="let good of goods">
       <td>
@@ -16,7 +16,7 @@
       <td>{{ good.type }}</td>
       <td>{{ good.price }}</td>
       <td>
-        <a (click)="addToBasket(good)">ADD</a>
+        <a (click)="remove(good)">remove</a>
       </td>
     </tr>
   </table>

@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <table class="goods-list">
+    <thead>
+    <tr>
+      <th class="name">name</th>
+      <th class="type">type</th>
+      <th class="price">price</th>
+    </tr>
+    </thead>
+    <tr *ngIf="!isLoading">
+      <td>{{ good.name }}</td>
+      <td>{{ good.type }}</td>
+      <td>{{ good.price }}</td>
+    </tr>
+  </table>
+</div>
