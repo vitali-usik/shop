@@ -313,6 +313,30 @@ body {
   width 800px
   margin 20px auto
 
+  nav {
+    width 600px
+    margin 0 auto
+    ul {
+      list-style none
+      padding 0
+      margin 10px 0
+
+      li {
+        display inline-block
+        margin-right 10px
+
+        a {
+          color #40a4a4
+          text-decoration none
+
+          &:hover {
+            opacity .5
+          }
+        }
+      }
+    }
+  }
+
   .goods-list {
     margin 0 auto
     text-align center
@@ -339,10 +363,14 @@ body {
   }
 
   .add-good {
+    text-align center
     label {
       display block
       margin 10px 0
     }
   }
+}
+h5 {
+  text-align center
 }
 

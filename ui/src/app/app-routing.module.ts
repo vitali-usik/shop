@@ -4,6 +4,7 @@ import {GoodsListRoute} from "./routes/goods-list.route";
 import {AddGoodsRoute} from "./routes/add-goods.route";
 import {GoodsItemRoute} from "./routes/goods-item.route";
 import {BasketRoute} from "./routes/basket.route";
+import {AboutRoute} from "./routes/about.route";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'context', pathMatch: 'full' },
@@ -16,6 +17,7 @@ export const routes: Routes = [
       { path: 'show/my/basket', component: BasketRoute }
     ]
   },
+  { path: 'about', component: AboutRoute },
   { path: '**', redirectTo: 'goods', pathMatch: 'full' }
 ];
 

@@ -1,4 +1,20 @@
 <div class="wrapper">
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]="['/goods']">Main</a>
+      </li>
+      <li>
+        <a [routerLink]="['/goods/add']">Add</a>
+      </li>
+      <li>
+        <a [routerLink]="['/goods/show/my/basket']">My cart</a>
+      </li>
+      <li>
+        <a [routerLink]="['/about']">About</a>
+      </li>
+    </ul>
+  </nav>
   <h5>My goods</h5>
   <table class="goods-list">
     <thead>

@@ -13,6 +13,7 @@ import {GoodsListRoute} from "./routes/goods-list.route";
 import {AddGoodsRoute} from "./routes/add-goods.route";
 import {GoodsItemRoute} from "./routes/goods-item.route";
 import {BasketRoute} from "./routes/basket.route";
+import {AboutRoute} from "./routes/about.route";
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import {BasketRoute} from "./routes/basket.route";
     GoodsListRoute,
     AddGoodsRoute,
     GoodsItemRoute,
-    BasketRoute
+    BasketRoute,
+    AboutRoute
   ],
   bootstrap: [AppComponent]
 })
